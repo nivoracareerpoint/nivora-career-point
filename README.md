@@ -1,42 +1,91 @@
-# Nivora Career Point — Website
+# Nivora Career Point
 
-A static, mobile-responsive marketing website with three working enquiry forms (Admissions, Jobs, Employers) plus a general Contact form. No backend/database required — built to deploy on Netlify as-is.
+> A modern, responsive career and education consultancy website built for clear enquiries, trusted communication, and easy deployment.
 
-## Pages
-- `index.html` — Homepage
-- `about.html` — About the consultancy
-- `admissions.html` — Admission enquiry form
-- `jobs.html` — Job seeker enquiry form
-- `employers.html` — Employer / recruitment requirement form
-- `contact.html` — General contact form
-- `privacy.html`, `terms.html` — Legal pages (**template text — have a professional review before publishing**, especially fees/refunds/guarantee sections)
+[![Live-ready](https://img.shields.io/badge/Deployment-Netlify--ready-00C7B7?logo=netlify&logoColor=white)](https://www.netlify.com/)
+[![Built with](https://img.shields.io/badge/Built%20with-HTML%20%7C%20CSS%20%7C%20JavaScript-E34F26)](https://github.com/nivoracareerpoint/nivora-career-point)
 
-## How the forms work
-All four forms use **Netlify Forms** (`data-netlify="true"`). This means:
-- No backend code needed — Netlify detects the forms automatically on deploy.
-- Every submission appears in your Netlify dashboard under **Site → Forms**.
-- You can turn on **email notifications** so every submission also lands in `nivoracareerpoint@gmail.com`:
-  Site settings → Forms → Form notifications → Add notification → Email notification → enter your email.
-- A spam honeypot field (`bot-field`) is already included on every form.
+## Overview
 
-## Deploying to Netlify (drag-and-drop — easiest, no Git needed)
-1. Go to [app.netlify.com](https://app.netlify.com) and log in / sign up.
-2. From the dashboard, drag the whole `nivora-site` folder onto the **"Add new site" → "Deploy manually"** area.
-3. Netlify gives you a live URL immediately (something like `random-name.netlify.app`).
-4. Go to **Site settings → Forms** and turn on email notifications as described above.
-5. (Optional) Go to **Domain settings** to connect a custom domain like `nivoracareerpoint.com` once you've bought one.
+Nivora Career Point is a static, mobile-responsive website created for a career and education consultancy. The site gives students, job seekers, employers, and general visitors a simple way to understand the service and submit an enquiry.
 
-## Deploying via GitHub (better for future updates)
-1. Push this folder to a GitHub repository.
-2. In Netlify: **Add new site → Import an existing project → GitHub** → select the repo.
-3. Build command: leave blank. Publish directory: `.` (already set in `netlify.toml`).
-4. Every future `git push` will auto-redeploy the site.
+The project is intentionally lightweight: no framework, backend, database, or build process is required. It can be deployed directly through Netlify and maintained easily through GitHub.
 
-## Before going fully live — checklist
-- [ ] Replace placeholder text in `privacy.html` and `terms.html` after legal review (pricing, refunds, guarantees are intentionally left blank — do not invent these).
-- [ ] Add a phone/WhatsApp number once finalized (currently only email is listed, as that's what was confirmed).
-- [ ] Buy and connect the `nivoracareerpoint.com` domain (or your final chosen domain) in Netlify.
-- [ ] Once you have verified colleges/jobs to list, we can add real listing pages — the current site intentionally avoids inventing institution or job listings, per the "no fake claims" principle in your PRD.
+## Highlights
 
-## Later upgrades (not in this version)
-Lead-management CRM, counsellor assignment, job approval workflow, candidate/employer portals, AI assistant, WhatsApp automation, payments — these are Phase 2 features from the PRD and were intentionally left out of this website-only build.
+- Clean, responsive design for desktop, tablet, and mobile
+- Dedicated pages for admissions, jobs, employers, and general contact enquiries
+- Netlify Forms integration with spam honeypot protection
+- Accessible mobile navigation and form feedback
+- SEO essentials including canonical URLs, robots.txt, and sitemap.xml
+- Security-focused Netlify response headers
+- Simple static architecture with fast deployment and low maintenance
+
+## Website Structure
+
+| File / Folder | Purpose |
+|---|---|
+| `index.html` | Homepage and primary introduction |
+| `about.html` | Consultancy overview |
+| `admissions.html` | Student admission enquiry form |
+| `jobs.html` | Job seeker enquiry form |
+| `employers.html` | Employer and recruitment requirement form |
+| `contact.html` | General contact enquiry form |
+| `privacy.html` | Privacy policy template for final review |
+| `terms.html` | Terms and conditions template for final review |
+| `css/style.css` | Complete website styling and responsive layout |
+| `js/main.js` | Navigation and form interaction logic |
+| `netlify.toml` | Netlify publish configuration and security headers |
+| `robots.txt` | Search-engine crawling guidance |
+| `sitemap.xml` | Search-engine page discovery |
+
+## Forms and Enquiries
+
+All four enquiry forms use Netlify Forms. No custom backend is needed.
+
+After deployment:
+
+1. Open the Netlify site dashboard.
+2. Go to **Forms** to view submissions.
+3. Configure email notifications if enquiries should be forwarded to the business inbox.
+4. Test each form once from the live website before sharing it with clients.
+
+## Deploy on Netlify
+
+This repository is configured for a static Netlify deployment.
+
+**Recommended settings:**
+
+- Build command: leave blank
+- Publish directory: `.`
+- Branch: `main`
+
+With GitHub connected to Netlify, every update pushed to `main` can trigger a fresh deployment automatically.
+
+## Local Preview
+
+Because this is a static website, it can be previewed without installing dependencies. Open `index.html` in a browser, or use any simple local static server for a closer production-style preview.
+
+Example with Python:
+
+```bash
+python -m http.server 8000
+```
+
+Then open `http://localhost:8000` in your browser.
+
+## Before Final Client Handover
+
+- Review and replace the template wording in `privacy.html` and `terms.html` with approved legal content.
+- Confirm the final business email, phone number, and WhatsApp details.
+- Connect the approved custom domain in Netlify.
+- Submit test enquiries from the live site and verify they appear in Netlify Forms.
+- Check the site on mobile and desktop before sharing the final link.
+
+## Project Principles
+
+This website keeps the front-end simple, professional, and maintainable. It avoids invented college listings, job listings, guarantees, pricing, or business claims until the client provides verified information.
+
+## Credits
+
+Built for **Nivora Career Point** with a focus on responsive design, clear user journeys, and reliable static deployment.
